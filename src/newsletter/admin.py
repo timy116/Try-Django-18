@@ -1,5 +1,5 @@
 from django.contrib import admin
-from newslatter.models import SignUp
+from newsletter.models import SignUp
 
 
 class SignUpAdmin(admin.ModelAdmin):

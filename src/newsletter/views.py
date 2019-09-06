@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from newslatter.forms import SignUpForm, ContactForm
+from newsletter.forms import SignUpForm, ContactForm
 
 
 def index(request):

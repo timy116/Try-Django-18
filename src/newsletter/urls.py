@@ -1,5 +1,5 @@
 from django.conf.urls import url
-from newslatter import views
+from newsletter import views
 
 
 urlpatterns = [

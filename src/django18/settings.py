@@ -39,7 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 
     # local apps
-    'newslatter',
+    'newsletter',
 )
 
 MIDDLEWARE_CLASSES = (

@@ -1,6 +1,6 @@
 import re
 from django import forms
-from newslatter.models import SignUp
+from newsletter.models import SignUp
 
 
 class ContactForm(forms.Form):
