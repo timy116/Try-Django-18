@@ -11,6 +11,9 @@ class SignUpForm(forms.ModelForm):
 
     def clean_email(self):
         email = self.data.get('email')
-        if not re.match(r'[a-z][\w]{5,32}@[a-z\d]{2,}([\.]{1,}[a-z0-9]{2,}){1,}', email):
+        if not re.match(r'[a-zA-Z][\w]{4,32}@[a-z\d]{3,}([.]+[a-z0-9]{2,})+', email):
             return forms.ValidationError('Email format error.')
+        instance = SignUp.objects.filter(email=email)
+        if instance.exists():
+            return forms.ValidationError('Email has already benn used.')
         return email
