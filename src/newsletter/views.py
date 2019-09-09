@@ -6,8 +6,7 @@ def index(request):
     form = SignUpForm(request.POST or None)
     if form.is_valid():
         form.save()
-    # return render(request, 'index.html', {'form': form})
-    return render(request, 'base.html', {'form': form})
+    return render(request, 'index.html', {'form': form})
 
 
 def contact(request):

@@ -1,14 +1,16 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Welcome</title>
+    <title>{% block head_title %}Welcome | {{ block.super }}{%  endblock %}</title>
 </head>
 <body>
+	{% block content %}
     <form method="post" action="">
         {% csrf_token %}
         {{ form.as_p }}
         <input type="submit" value="submit">
     </form>
+	{% endblock %}
 </body>
 </html>
