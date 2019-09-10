@@ -24,6 +24,13 @@
     {% include 'nav-bar.html' %}
 
     <div class="container">
+    {% block jumbotron %}
+    <div class="jumbotron">
+      {% block jumbotron_content %}
+      {% endblock %}
+    </div>
+    {% endblock %}
+
     {% block content %}
     {% endblock %}
     </div>
