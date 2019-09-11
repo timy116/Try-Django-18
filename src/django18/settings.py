@@ -129,3 +129,4 @@ ACCOUNT_ACTIVATION_DAYS = 7
 # when they click on the activation link in their email. Defaults to False.
 REGISTRATION_AUTO_LOGIN = True
 SITE_ID = 1
+LOGIN_REDIRECT_URL = '/newsletter/'
