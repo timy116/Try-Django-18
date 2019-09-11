@@ -14,4 +14,4 @@ def contact(request):
     if form.is_valid():
         for k, v in form.cleaned_data.items():
             print(k, v)
-    return render(request, 'forms.html', {'form': form})
+    return render(request, 'forms.html', {'form': form, 'title': 'Contact Us ...'})
