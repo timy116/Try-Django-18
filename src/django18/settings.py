@@ -35,11 +35,13 @@ INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
     # third party
     'crispy_forms',
+    'registration',
 
     # local apps
     'newsletter',
@@ -114,4 +116,16 @@ STATICFILES_DIRS = [
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static_cdn', 'media_root')
 
+
+# django-crispy-form settings
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
+
+
+# django-registration-redux settings
+# This is the number of days users will have to activate their accounts after registering.
+ACCOUNT_ACTIVATION_DAYS = 7
+
+# Optional. If this is True, your users will automatically log in
+# when they click on the activation link in their email. Defaults to False.
+REGISTRATION_AUTO_LOGIN = True
+SITE_ID = 1
